@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/:groupName' element={<NotesPage />}></Route>
+          <Route path='/:groupName' element={<NotesPage />} />
         </Routes>
       </Router>
     </>
