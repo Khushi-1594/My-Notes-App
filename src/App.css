@@ -1,0 +1,524 @@
+body {
+    margin: 0;
+    font-family:Arial;
+    background-color: #f0f4fa;
+}
+
+.main-div{
+    display: flex;
+    height: 100vh;
+}
+ 
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.sidebar .sidebar-heading{
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+}
+
+.sidebar-heading h2{
+    font-size: 28px;
+}
+
+.addgroup-btn{
+    position: sticky;
+    margin-top: auto;
+    align-self: flex-end;
+    bottom: 20px;
+    margin-right: 20px;
+    background-color: #16008B;
+    border-radius: 50%;
+    color: white;
+    border: none;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+.addgroup-btn:hover{
+    background-color: #27158d;
+    cursor: pointer;
+}
+
+.main {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #DAE5F5;
+    height: 100vh;
+}
+
+.content{
+    text-align: center;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.image {
+    margin-bottom: 20px;
+}
+  
+.illustration-image {
+    width: 80%;
+    height: auto;
+}
+
+.description {
+    font-size: 18px;
+    color: #272626;
+    margin: 10px 0 20px;
+    line-height: 1.5;
+}
+
+.footer-div{
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 16px;
+    color: #272626;
+}
+
+.footer-text .lock-img{
+    width: 15px;
+    height: 18px;  
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+  
+.modal-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 460px;
+    height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+  
+.modal-box h3 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 22px;
+    color: #333;
+    margin-left: 0px;
+}
+  
+.modal-box form input[type="text"] {
+    width: 66%;
+    padding: 10px;
+    margin: 10px 16px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+form label{
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form p{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.color-selector{
+    display: flex;
+    gap: 8px;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 10px;
+}
+
+.label-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.label-color input[type="radio"] {
+    display: none;
+}
+
+.label-color input[type="radio"]:checked + .color::after{
+    content: "\2713";
+    color: white;
+    font-size: 20px;
+    margin: 10px 7px;
+}
+  
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+  
+.color.purple {
+    background-color: #B38BFA;
+}
+  
+.color.pink {
+    background-color: #FF79F2;
+}
+  
+.color.teal {
+    background-color: #43E6FC;
+}
+  
+.color.orange {
+    background-color: #F19576;
+}
+  
+.color.dark-blue {
+    background-color: #0047FF;
+}
+
+.color.blue{
+    background-color: #6691FF;
+}
+
+
+.create-btn {
+    background-color: #001F8B;
+    color: white;
+    width: 120px;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 340px;
+    margin-top: 12px;
+}
+  
+.create-btn:hover {
+    background-color: #1c86ee;
+} 
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 10px;
+    width: 100%;
+}
+
+.sidebar .grp-list{
+    flex: 1;
+}
+
+.grp-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.grp-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.grp-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.group-header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    background-color: #001F8B;
+    color: white;
+    height: 5vh;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.notes-main{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+}
+
+.group-icon.large{
+    width: 48px;
+    height: 48px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.note-container{
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 95%;
+    margin-left: 16px;
+}
+
+.note{
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note p{
+    margin: 0 0 20px;
+    font-size: 18px;
+    color: #3c3c3c;
+    line-height: 1.5;
+}
+
+.timeStamp {
+    font-size: 16px;
+    color:black;
+    text-align: right;
+    display: block;
+}
+
+.notes-bottom-area {
+    background-color: #001F8B;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+}
+
+.textarea-wrap {
+    position: relative; 
+    width: 95%;
+}
+
+.note-textarea {
+    width: 100%;
+    padding: 12px;
+    padding-right: 60px;
+    border-radius: 8px;
+    background-color: white;
+    border: none;
+    height: 136px;
+    font-size: 16px;
+    outline: none;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.addnote-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+}
+
+.addnote-btn:disabled {
+    cursor: not-allowed;
+}
+
+.addbtn-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 640px) {
+
+    .main{
+        display: none;
+    }
+
+    .main-div.notes-view .sidebar{
+        display: none;
+    }
+
+    .main-div.notes-view .notes-main{
+        width: 100%;
+        height: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar .sidebar-heading{
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        margin-top: 0;
+    }
+
+    .sidebar h2 {
+        font-size: 28px;
+    }
+
+    .sidebar ul {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .grp-item {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .grp-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .group-header {
+        padding: 10px;
+        height: auto;
+    }
+
+    .group-icon.large {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Notes Container */
+    .note-container {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .note {
+        padding: 15px;
+    }
+
+    .note p {
+        font-size: 16px;
+    }
+
+    .timeStamp {
+        font-size: 14px;
+    }
+
+    /* Textarea and Bottom Area */
+    .notes-bottom-area {
+        height: 140px;
+        padding: 10px;
+    }
+
+    .textarea-wrap {
+        width: 100%;
+    }
+
+    .note-textarea {
+        height: 120px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .addnote-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .addbtn-img {
+        width: 80%;
+        height: 80%;
+    }
+
+    /* Modal */
+    .modal-box {
+        width: 80%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .modal-box h3 {
+        font-size: 20px;
+    }
+
+    .modal-box form input[type="text"] {
+        width: 60%;
+        margin: 10px 15px;
+    }
+
+    .create-btn {
+        margin-left: 70%;
+        width: 100px;
+    }
+}
